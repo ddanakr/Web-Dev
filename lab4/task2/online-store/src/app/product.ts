@@ -1,0 +1,148 @@
+import { Injectable } from '@angular/core';
+import { Product } from './models/product.model';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class ProductService {
+  
+  private products: Product[] = [
+    {
+      id: 1,
+      title: 'Сортер Набор развивающих игрушек',
+      price: 2749,
+      rating: 5,
+      reviewsCount: 4012,
+      imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/pa0/p69/8929737.jpeg?format=preview-large', 
+      installmentPrice: 917,
+      installmentMonths: 3,
+      link: 'https://kaspi.kz/shop/p/sorter-nabor-razvivajuschih-igrushek-derevo-108447545/?c=750000000',
+    },
+    {
+      id: 2,
+      title: 'Планшет LCD Планшет для рисования',
+      price: 548,
+      rating: 5,
+      reviewsCount: 758,
+      imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/p39/p6b/5853944.png?format=preview-large', 
+      installmentPrice: 183,
+      installmentMonths: 3,
+      link: 'https://kaspi.kz/shop/p/planshet-lcd-planshet-dlja-risovanija-plastik-106688749/?c=750000000',
+    },
+    {
+      id: 3,
+      title: 'Пазл 4 тематики, животные, предметы, продукты',
+      price: 1295,
+      rating: 5,
+      reviewsCount: 657,
+      imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/p9d/p8c/1901796.jpeg?format=preview-large',
+      installmentPrice: 432,
+      installmentMonths: 3,
+      link: 'https://kaspi.kz/shop/p/pazl-4-tematiki-zhivotnye-predmety-produkty-transport-karton-128219574/?c=750000000',
+    },
+    {
+      id: 4,
+      title: 'Удочки и спиннинги Kabi Мини рыбалка',
+      price: 700,
+      rating: 5,
+      reviewsCount: 1213,
+      imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/pd0/p4a/52604786.jpg?format=preview-large',
+      installmentPrice: 234,
+      installmentMonths: 3,
+      link: 'https://kaspi.kz/shop/p/udochki-i-spinningi-kabi-mini-rybalka-derevo-101703488/?c=750000000',
+    },
+    {
+      id: 5,
+      title: 'Головоломка Фрукты и овощи, цвета, фигуры, машинки',
+      price: 1700,
+      rating: 5,
+      reviewsCount: 836,
+      imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/p51/p70/39436117.png?format=preview-large',
+      installmentPrice: 567,
+      installmentMonths: 3,
+      link: 'https://kaspi.kz/shop/p/golovolomka-frukty-i-ovoschi-tsveta-figury-mashinki-ryby-tsifry-karton-116422441/?c=750000000',
+    },
+    {
+      id: 6,
+      title: 'Планшет MagPad LCD 846906',
+      price: 545,
+      rating: 5,
+      reviewsCount: 824,
+      imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h18/hec/68019899269150.jpg?format=preview-large',
+      installmentPrice: 182,
+      installmentMonths: 3,
+      link: 'https://kaspi.kz/shop/p/planshet-magpad-lcd-846906-rozovyi-108501451/?c=750000000',
+    },
+    {
+      id: 7,
+      title: 'Детское пюре ФрутоНяня клубника, яблоко, банан 90 г',
+      price: 480,
+      rating: 5,
+      reviewsCount: 401,
+      imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h36/hf0/64024145166366.jpg?format=preview-large',
+      installmentPrice: 160,
+      installmentMonths: 3,
+      link: 'https://kaspi.kz/shop/p/frutonjanja-klubnika-jabloko-banan-90-g-101048221/?c=750000000',
+    },
+    {
+      id: 8,
+      title: 'Книжка-игрушка Aurora Toki Cat',
+      price: 4500,
+      rating: 5,
+      reviewsCount: 32,
+      imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h12/ha1/86416059007006.jpg?format=preview-large',
+      installmentPrice: 1500,
+      installmentMonths: 3,
+      link: 'https://kaspi.kz/shop/p/knizhka-igrushka-aurora-toki-cat-plastik-karton-120934895/?c=750000000',
+    },
+    {
+      id: 9,
+      title: 'Пеленка одноразовая Tomiko 60x60, 10 шт',
+      price: 1800,
+      rating: 5,
+      reviewsCount: 297,
+      imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h5c/h08/85023210471454.jpg?format=preview-large',
+      installmentPrice: 600,
+      installmentMonths: 3,
+      link: 'https://kaspi.kz/shop/p/pelenka-odnorazovaja-tomiko-60x60-10-sht-60x60-sm-116161850/?c=750000000',
+    },
+    {
+      id: 10,
+      title: 'Сортер Kabi Геометрия 5в1',
+      price: 763,
+      rating: 5,
+      reviewsCount: 692,
+      imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/h15/ha8/64309288468510.jpg?format=preview-large',
+      installmentPrice: 255,
+      installmentMonths: 3,
+      link: 'https://kaspi.kz/shop/p/sorter-kabi-geometrija-5v1-mul-tikolor-101702936/?c=750000000',
+    },
+    {
+      id: 11,
+      title: 'Подгузники-трусики Huggies Ultra Comfort 5, 84 шт',
+      price: 13360,
+      rating: 5,
+      reviewsCount: 46,
+      imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/p79/p15/59288596.png?format=preview-large',
+      installmentPrice: 4454,
+      installmentMonths: 3,
+      link: 'https://kaspi.kz/shop/p/podguzniki-trusiki-huggies-ultra-comfort-5-84-sht-144283025/?c=750000000',
+    },
+    {
+      id: 12,
+      title: 'Подгузники-трусики Huggies 5, 84 шт',
+      price: 13360,
+      rating: 5,
+      reviewsCount: 52,
+      imageUrl: 'https://resources.cdn-kaspi.kz/img/m/p/p05/p7d/71845682.png?format=preview-large',
+      installmentPrice: 4454,
+      installmentMonths: 3,
+      link: 'https://kaspi.kz/shop/p/podguzniki-trusiki-huggies-5-84-sht-143473282/?c=750000000',
+    }
+  ];
+
+  getProducts(): Product[] {
+    return this.products;
+  }
+
+}
