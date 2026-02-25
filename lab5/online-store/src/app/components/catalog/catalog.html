@@ -1,0 +1,55 @@
+<div class="catalog-block">
+    <div class="catalog-block-inner">
+        <app-sidebar [categories]="categories" (categorySelected)="selectCategory($event)" [selectedId]="selectedCategoryId()"></app-sidebar>
+
+        <div class="right-side">
+            <div class="top-container">
+                <div class="toolbar">
+                    <div class="sort-wrapper">
+                        <select class="sort-select">
+                            <option>Популярные</option>
+                            <option>Новинки</option>
+                            <option>Сначала дешевые</option>
+                            <option>Сначала дорогие</option>
+                            <option>Высокий рейтинг</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            @if (selectedCategoryId()) {
+                <app-product-list [products]="filteredProducts()" />
+            } @else {
+                <div class="welcome">Выберите категорию, чтобы увидеть товары</div>
+            }
+            <!-- <app-product-list [products]="filteredProducts()"></app-product-list> -->
+
+            <div class="page-counter">
+
+            </div>
+
+            <nav class="pagination-container">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <span class="page-link">← Предыдущая</span>
+                    </li>
+
+                    <li class="page-item active">
+                        <span class="page-link">1</span>
+                    </li>
+
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+
+                    <li class="page-item">
+                        <a href="#" class="page-link next">Следующая →</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+    
+</div>

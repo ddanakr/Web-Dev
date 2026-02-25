@@ -1,0 +1,160 @@
+.product-card {
+  width: 210px;
+  background: white;
+  padding: 20px 15px 0px 15px;
+  border: 1px solid #efefef;
+  font-family: Arial, sans-serif;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.product-link-wrapper {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block;
+    cursor: pointer;
+}
+
+.image-container {
+  width: 210px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.product-img {
+  width: 180px;
+  height: 150px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/* Бейдж 0-0-12 */
+.installment-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #fb4a2a;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  z-index: 1;
+}
+
+/* Кнопка Поделиться */
+.share-btn {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  background: white;
+  border: 1px solid #efefef;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #0089d0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+
+/* Текстовая информация */
+.product-title {
+  display: block;
+  color: #0089d0;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 0px;
+  height: 42px; /* Ограничение высоты для двух строк */
+  overflow: hidden;
+}
+
+.stars { 
+    color: #f27c32; 
+    letter-spacing: 2px; 
+}
+
+.reviews-count { 
+    color: #0089d0; 
+    margin-left: 5px; 
+    font-size: 14px; 
+}
+
+
+/* Сетка цен */
+.price-block {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+
+.price-label {
+  display: block;
+  color: #999;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.main-price {
+  font-size: 17px;
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background: #eee;
+  margin: 0 10px;
+}
+
+/* Желтый фон рассрочки */
+.yellow-bg {
+  background: #ffea00;
+  padding: 2px 5px;
+  font-size: 14px;
+}
+
+.multiplier {
+  color: #999;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+
+.card-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 35px;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+
+.like-btn {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.like-btn span {
+  font-size: 20px;
+}
+
+.delete-btn {
+  background-color: white;
+  border: none;
+  color: #777;
+  cursor: pointer;
+}
