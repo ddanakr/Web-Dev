@@ -1,0 +1,8 @@
+<div class="product-list">
+    @for (item of products(); track item.id) {
+        <app-product-card [product]="item" (remove)="onDeleteProduct($event)">
+        </app-product-card>
+    } @empty {
+      <p>В этой категории нет товаров.</p>
+    }
+</div>

@@ -1,0 +1,170 @@
+.sidebar-container {
+  width: 240px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  padding: 10px;
+}
+
+/* Общие элементы */
+.count-gray { 
+    color: #999; 
+    margin-left: 4px; 
+    font-weight: normal; 
+}
+
+.category-tabs {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-tabs button {
+    background: none;
+    border: none;
+    padding: 10px 0;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+    color: #0089d0;
+}
+
+.category-tabs button.active {
+    color: red;
+}
+
+
+
+.divider { 
+    border: 0; 
+    border-top: 1px solid #efefef; 
+    margin: 15px 0; 
+}
+
+
+/* Категории */
+.root-link { 
+    color: #0089d0; 
+    font-weight: bold; 
+    font-size: 14px; 
+    margin-bottom: 15px; 
+    cursor: pointer; 
+}
+
+.category-header { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px; 
+}
+
+.title-bold { 
+    font-weight: bold; 
+    font-size: 14px; 
+    margin-left: 8px; 
+}
+
+
+.sub-list { 
+    list-style: none; 
+    padding-left: 28px; 
+    margin: 0; 
+}
+
+.sub-list li { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 12px; 
+    font-size: 13px; 
+}
+
+.link-blue { 
+    color: #0089d0; 
+    margin-left: 8px; 
+    cursor: pointer; 
+}
+
+.link-blue:hover { 
+    text-decoration: underline; 
+}
+
+
+/* Фильтры и чекбоксы */
+.filter-title { 
+    font-size: 14px; 
+    font-weight: bold; 
+    margin-bottom: 12px; 
+}
+
+.checkbox-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.item { 
+    display: flex; 
+    align-items: center; 
+    font-size: 14px; 
+    cursor: pointer; 
+}
+
+.item input { 
+    width: 15px; 
+    height: 15px; 
+    margin-right: 10px; 
+    border: 1px solid #eee; 
+    cursor: pointer; 
+}
+
+
+/* Ссылка "Показать еще" */
+.show-more { 
+    color: #0089d0; 
+    font-size: 14px; 
+    margin-top: 12px; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+}
+
+.show-more:hover { 
+    text-decoration: underline; 
+}
+
+
+/* Иконки-стрелочки */
+.icon-circle, .icon-circle-small {
+  width: 20px; 
+  height: 20px; 
+  background: #f2f2f2; 
+  border-radius: 50%;
+
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  position: relative;
+}
+
+.arrow-down::after, .arrow-right::after, .arrow-down-blue::after {
+  content: ''; 
+  border: solid #333; 
+  border-width: 0 1.5px 1.5px 0; 
+  display: inline-block; 
+  padding: 2px;
+}
+
+.arrow-down::after { 
+    transform: rotate(45deg); 
+    margin-bottom: 2px; 
+}
+
+.arrow-right::after { 
+    transform: rotate(-45deg); 
+    margin-right: 2px; 
+    border-color: #999; 
+}
+
+.arrow-down-blue::after { 
+    border-color: #0089d0; 
+    transform: rotate(45deg); 
+    margin-left: 5px; 
+    margin-bottom: 2px; 
+}
