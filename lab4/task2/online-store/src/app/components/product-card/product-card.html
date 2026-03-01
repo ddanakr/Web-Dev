@@ -1,0 +1,47 @@
+<div class="product-card">
+    <a [href]="product.link" target="_blank" class="product-link-wrapper">
+        <div class="image-container">
+            <div class="installment-badge">0•0•12</div>
+            <button class="share-btn" title="Поделиться">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/>
+                </svg>
+            </button>
+            <img [src]="product.imageUrl" [alt]="product.title" class="product-img">
+        </div>
+
+        <div class="product-info">
+            <a href="#" class="product-title">{{ product.title }}</a>
+            
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews-count">({{ product.reviewsCount }} отзывов)</span>
+            </div>
+
+            <div class="price-block">
+            <div class="price-col">
+                <span class="price-label">Цена</span>
+                <span class="main-price">{{ product.price }} ₸</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="price-col">
+                <span class="price-label">В рассрочку</span>
+
+                <div class="installment-price">
+                    <span class="yellow-bg">{{ product.installmentPrice }} ₸</span>
+                    <span class="multiplier"> x{{ product.installmentMonths }}</span>
+                </div>
+            </div>
+            </div>
+        </div>        
+    </a>
+
+    <button class="share-btn" title="Поделиться" (click)="shareToWhatsapp()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/>
+        </svg>
+    </button>
+
+</div>
