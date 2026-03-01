@@ -13,11 +13,7 @@ export class ProductCard {
   remove = output<number>();
 
   like() {
-    if(this.isLiked()){
-      this.product().likes -= 1;
-      return;
-    }
-    this.product().likes += 1;
+    this.product().likes++;
   }
 
   isLiked(): boolean {

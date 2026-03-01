@@ -290,11 +290,4 @@ export class ProductService {
     this.products.update(prev => prev.filter(p => p.id !== id));
   }
 
-  // const index = this.products().findIndex(p => p.id === id);
-
-  // // 2. If it exists (index is not -1), remove it
-  // if (index !== -1) {
-  //   // .splice(startingIndex, deleteCount)
-  //   this.products().splice(index, 1);
-
 }

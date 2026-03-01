@@ -22,7 +22,7 @@ export class Catalog {
 
     if(catgId === null) return [];
 
-    return allProducts.filter(p => p.categoryId == catgId).sort((a, b) => a.title.localeCompare(b.title));
+    return allProducts.filter(p => p.categoryId == catgId);
 
     
   })
