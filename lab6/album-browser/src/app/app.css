@@ -1,0 +1,36 @@
+.header-container {
+    margin: 0;
+    height: 80px;
+    color: #eee;
+    background-color: #222;
+    font-weight: bold;
+    font-size: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 5px 10px 13px rgba(0,0,0,0.1);
+}
+
+.navigation-bar {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+
+    font-size: 18px;
+}
+
+.navigation-bar a{
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+}
+
+.active {
+    font-weight: bold;
+}

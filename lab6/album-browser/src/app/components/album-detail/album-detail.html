@@ -1,0 +1,26 @@
+<div class="detail-container">
+    @if (isLoading()) {
+        <p>Loading album details...</p>
+    } @else if (album() ; as currentAlbum) {
+        <h2>Edit Album #{{ currentAlbum.id }}</h2>
+
+        <div class="card">
+            <div class="field">
+                <label>User ID: {{ currentAlbum.userId }}</label>
+                <label>Title: {{ currentAlbum.title }}</label>
+                <input [(ngModel)]="draftTitle" placeholder="New title"/>
+            </div>
+
+            <div class="actions">
+                <button class="save-btn" (click)="saveChanges()">Save</button>
+                <button class="photos-btn" [routerLink]="['/albums', currentAlbum.id, 'photos']">
+                    View Photos
+                </button>
+                <button class="back-btn" (click)="goBack()">Back</button>
+            </div>
+        </div>
+    } @else {
+        <p>Album not found</p>
+        <button class="back-btn" (click)="goBack()">Back</button>
+    }
+</div>

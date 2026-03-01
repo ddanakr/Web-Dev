@@ -1,0 +1,27 @@
+
+<div class="albums-container">
+    <h1>Albums</h1>
+
+    @if (isLoading) {
+        <p class="loader">Loading albums...</p>
+    } @else {
+        <div class="album-list">
+            @for (album of albums(); track album.id) {
+                <div class="album-card" [routerLink]="['/albums', album.id]">
+                    <div class="album-info">
+                        <p> {{ album.title }}</p>
+                    </div>
+                    
+                    <button class="delete-btn" (click)="deleteAlbum(album.id, $event)">
+                        Delete
+                    </button>
+                </div>
+
+                
+            } @empty {
+                <p>No albums found</p>
+            }
+        </div>
+    }
+</div>
+
