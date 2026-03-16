@@ -22,8 +22,8 @@ export class Albums implements OnInit {
   }
 
   fetchAlbums(): void {
-  this.isLoading = true;
-  this.albumService.getAlbums().subscribe({
+    this.isLoading = true;
+    this.albumService.getAlbums().subscribe({
     next: (data) => {
       console.log('Albums received:', data);
       this.albums.set(data);
@@ -36,6 +36,8 @@ export class Albums implements OnInit {
     }
   });
 }
+
+  
 
   deleteAlbum(id: number, event: Event): void {
     event.stopPropagation();

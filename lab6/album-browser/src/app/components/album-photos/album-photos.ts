@@ -17,7 +17,7 @@ export class AlbumPhotos implements OnInit {
 
   photos: Photo[] = [];
   isLoading = true;
-
+  
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
 
