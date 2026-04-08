@@ -1,4 +1,6 @@
 {
     "chat.agent.codeBlockProgress": false,
-    "chat.agent.enabled": false
+    "chat.agent.enabled": false,
+    "python-envs.defaultEnvManager": "ms-python.python:venv",
+    "python-envs.defaultPackageManager": "ms-python.python:pip"
 }
